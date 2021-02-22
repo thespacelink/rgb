@@ -102,6 +102,7 @@ if (window.FileReader) {
 	alert("This browser doesn't support file reader. Please use HTML5 supported browser");
 }
 function addEventHandler(obj, evt, handler) {
+    if (obj === null) return;
 	if (obj.addEventListener) {
 		// W3C method
 		obj.addEventListener(evt, handler, false);
